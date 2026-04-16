@@ -167,6 +167,7 @@ int head_update(const ObjectID *new_commit) {
     
     f = fopen(tmp_path, "w");
     if (!f) return -1;
+ 
     
     char hex[HASH_HEX_SIZE + 1];
     hash_to_hex(new_commit, hex);
