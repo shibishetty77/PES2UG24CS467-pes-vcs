@@ -26,8 +26,8 @@
 #include <fcntl.h>
 
 // Forward declarations (implemented in object.c)
-int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out);
-int object_read(const ObjectID *id, ObjectType *type_out, void **data_out, size_t *len_out);
+ int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out);
+ int object_read(const ObjectID *id, ObjectType *type_out, void **data_out, size_t *len_out);
 
 // ─── PROVIDED ────────────────────────────────────────────────────────────────
 
@@ -119,8 +119,8 @@ int commit_walk(commit_walk_fn callback, void *ctx) {
 
         callback(&id, &c, ctx);
 
-        if (!c.has_parent) break;
-        id = c.parent;
+         if (!c.has_parent) break;
+         id = c.parent;
     }
     return 0;
 }
