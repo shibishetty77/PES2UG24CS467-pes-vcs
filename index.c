@@ -92,7 +92,7 @@ int index_status(const Index *index) {
     DIR *dir = opendir(".");
     if (dir) {
         struct dirent *ent;
-        while ((ent = readdir(dir)) != NULL) {
+         while ((ent = readdir(dir)) != NULL) {
             // Skip hidden directories, parent directories, and build artifacts
              if (strcmp(ent->d_name, ".") == 0 || strcmp(ent->d_name, "..") == 0) continue;
              if (strcmp(ent->d_name, ".pes") == 0) continue;
