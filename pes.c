@@ -74,7 +74,7 @@ void cmd_commit(int argc, char *argv[]) {
     const char *message = argv[3];
     ObjectID commit_id;
     if (commit_create(message, &commit_id) != 0) {
-        fprintf(stderr, "error: commit failed\n");
+         fprintf(stderr, "error: commit failed\n");
         return;
     }
 
@@ -97,7 +97,7 @@ static void print_commit(const ObjectID *id, const Commit *commit, void *ctx) {
 // Usage: pes log
 void cmd_log(void) {
     if (commit_walk(print_commit, NULL) != 0) {
-        fprintf(stderr, "No commits yet.\n");
+         fprintf(stderr, "No commits yet.\n");
     }
 }
 
@@ -115,14 +115,14 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    const char *cmd = argv[1];
+     const char *cmd = argv[1];
 
     if      (strcmp(cmd, "init") == 0)     cmd_init();
     else if (strcmp(cmd, "add") == 0)      cmd_add(argc, argv);
     else if (strcmp(cmd, "status") == 0)   cmd_status();
     else if (strcmp(cmd, "commit") == 0)   cmd_commit(argc, argv);
     else if (strcmp(cmd, "log") == 0)      cmd_log();
-    else {
+     else {
         fprintf(stderr, "Unknown command: %s\n", cmd);
         fprintf(stderr, "Run 'pes' with no arguments for usage.\n");
         return 1;
