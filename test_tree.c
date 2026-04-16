@@ -102,7 +102,7 @@ int main(void) {
     rc = system("rm -rf .pes");
     rc = system("mkdir -p .pes/objects .pes/refs/heads");
 
-    test_tree_roundtrip();
+     test_tree_roundtrip();
     test_tree_determinism();
 
     printf("\nAll Phase 2 tests passed.\n");
