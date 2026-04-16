@@ -109,7 +109,7 @@ static void sha256_transform(uint32_t state[8], const uint8_t block[64]) {
     state[4] += e; state[5] += f; state[6] += g; state[7] += h;
 }
 
-void compute_hash(const void *data, size_t len, ObjectID *id_out) {
+ void compute_hash(const void *data, size_t len, ObjectID *id_out) {
     uint32_t state[8] = {
         0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
         0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19
