@@ -80,7 +80,7 @@ int tree_parse(const void *data, size_t len, Tree *tree_out) {
 
 // Helper for qsort to ensure consistent tree hashing
 static int compare_tree_entries(const void *a, const void *b) {
-    return strcmp(((const TreeEntry *)a)->name, ((const TreeEntry *)b)->name);
+     return strcmp(((const TreeEntry *)a)->name, ((const TreeEntry *)b)->name);
 }
 
 // Serialize a Tree struct into binary format for storage.
