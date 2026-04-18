@@ -88,7 +88,7 @@ int main(void) {
     rc = system("rm -rf .pes");
     rc = system("mkdir -p .pes/objects .pes/refs/heads");
 
-    test_blob_storage();
+     test_blob_storage();
     test_deduplication();
     test_integrity();
 
