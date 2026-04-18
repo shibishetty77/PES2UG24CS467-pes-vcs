@@ -12,6 +12,7 @@
 #include <stdlib.h>
 
 void test_tree_roundtrip(void) {
+    
     // Build a tree manually
     Tree original;
     original.count = 3;
