@@ -52,7 +52,7 @@ void test_deduplication(void) {
     object_write(OBJ_BLOB, content, strlen(content), &id1);
     object_write(OBJ_BLOB, content, strlen(content), &id2);
 
-    assert(memcmp(&id1, &id2, sizeof(ObjectID)) == 0);
+     assert(memcmp(&id1, &id2, sizeof(ObjectID)) == 0);
 
     printf("PASS: deduplication\n");
 }
