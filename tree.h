@@ -28,7 +28,7 @@ int tree_parse(const void *data, size_t len, Tree *tree_out);
 // Serialize a Tree struct into raw bytes suitable for object_write(OBJ_TREE, ...).
 // Entries MUST be sorted by name before serialization.
 // Caller must free(*data_out).
-int tree_serialize(const Tree *tree, void **data_out, size_t *len_out);
+ int tree_serialize(const Tree *tree, void **data_out, size_t *len_out);
 
 // Build a Tree from the current index contents.
 // This is what `pes commit` uses: it reads the index and constructs a tree
