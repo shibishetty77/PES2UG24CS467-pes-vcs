@@ -71,6 +71,7 @@ int commit_parse(const void *data, size_t len, Commit *commit_out) {
     return 0;
 }
 
+
 // Serialize a Commit struct to the text format.
 // Caller must free(*data_out).
 int commit_serialize(const Commit *commit, void **data_out, size_t *len_out) {
